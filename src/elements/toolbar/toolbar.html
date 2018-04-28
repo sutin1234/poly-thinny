@@ -1,0 +1,55 @@
+<link rel="import" href="../../elements/includes.html">
+<link rel="import" href="../../elements/nav-left/list-nav-left.html">
+
+<!-- add custom-style -->
+<link rel="import" href="./custom-style.html">
+
+<dom-module id="toolbar-box">
+    <template>
+        <!-- include custom-style -->
+        <style include="toolbar-style"></style>
+        
+        <app-header reveals>
+        <app-toolbar>
+            <paper-icon-button icon="menu" on-click="ontoggle"></paper-icon-button>
+            <div id="text_welcome" main-title>{{title}}</div>
+            <div>
+        {{_width}}
+    </div>
+            <paper-button on-click="HomePage">
+                <paper-icon-button icon="home"></paper-icon-button> หน้าแรก 
+            </paper-button>
+            <paper-button on-click="quotationRequest">
+                <paper-icon-button icon="assignment"></paper-icon-button> ขอใบเสนอราคา
+            </paper-button>
+            <paper-button on-click="contact">
+                <paper-icon-button icon="polymer"></paper-icon-button> ติดต่อเรา
+            </paper-button>
+        </app-toolbar>
+        </app-header>
+        <app-drawer id="drawer" swipe-open>
+            <div class="image-cover">
+                <iron-image fade src="https://www.shareicon.net/download/2017/02/05/878221_user_512x512.png" preload></iron-image>
+            <div class="avatar-text">
+                Poly ThinnyDev @2018 
+            </div>
+            </div>
+            <div class="hoz-line">
+                วีดีโอสอน
+            </div>
+            <div class="menu">
+                <iron-list items="[[items]]" as="item">
+                    <template>
+                        <div class="menu">
+                            <a href="/#/videos/[[prettyUrl(item)]]">
+                                [[item]]
+                            </a>
+                        </div>
+                    </template>
+    </iron-list>
+    </div>
+    </app-drawer>
+
+    </template>
+    <script src="./toolbar.js"></script>
+</dom-module>

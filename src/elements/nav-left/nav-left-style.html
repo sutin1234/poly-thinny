@@ -1,0 +1,28 @@
+<link rel="import" href="../../elements/includes.html">
+
+<dom-module id="nav-left-style">
+    <template>
+              <custom-style>
+            <style>
+               :host {
+            height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            iron-list {
+
+            }
+            .list {
+                flex: 1 1 auto;
+                padding: 10px;
+                line-height: 20px;
+                font-weight: bold;
+            }
+            .list:hover {
+                background-color: #eee;
+                cursor: pointer;
+            }
+            </style>
+        </custom-style>
+    </template>
+</dom-module>

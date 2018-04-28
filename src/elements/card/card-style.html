@@ -1,0 +1,27 @@
+<link rel="import" href="../../elements/includes.html">
+
+<dom-module id="card-style">
+    <template>
+              <custom-style>
+            <style>
+                iron-image {
+                    --iron-image-width: 100%;
+                }
+
+                paper-card {
+
+                    --paper-card-header-color: #fff;
+                    --paper-card-header-image-text: {
+                        background-color: #000;
+                        opacity: .8;
+                    }
+                    
+                }
+
+                paper-card.card-content {
+                    word-wrap: wrap;
+                }
+            </style>
+        </custom-style>
+    </template>
+</dom-module>

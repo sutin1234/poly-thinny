@@ -1,0 +1,23 @@
+<link rel="import" href="../../elements/includes.html">
+<!-- add custom-style -->
+<link rel="import" href="./card-style.html">
+
+<dom-module id="card-box">
+    <template>
+        <!-- include custom-style -->
+        <style include="card-style"></style>
+
+        <paper-card heading="{{ video.snippet.title }}" fadeImage="true" image="{{ video.snippet.thumbnails.high.url }}" elevation="1"
+            animated="true">
+            <paper-ripple></paper-ripple>
+            <div class="card-content">
+                {{ video.snippet.description }}
+                <i>{{ video.snippet.publishedAt }}</i>
+            </div>
+            <div class="card-actions">
+                action
+            </div>
+        </paper-card>
+    </template>
+    <script src="./card.js"></script>
+</dom-module>

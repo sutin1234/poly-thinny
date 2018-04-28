@@ -1,0 +1,95 @@
+<link rel="import" href="../../elements/includes.html">
+<dom-module id="toolbar-style">
+
+    <template>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+        
+        app-drawer {
+            --app-drawer-content-container: {}
+        }
+        
+        app-toolbar {
+            background-color: #4285f4;
+            color: #fff;
+        }
+        
+        app-header {
+            @apply --layout-fixed-top;
+            color: #fff;
+            --app-header-background-rear-layer: {
+                background-color: #ef6c00;
+            }
+        }
+        
+        button-icon {
+            vertical-align: middle;
+        }
+        
+        paper-menu-button {
+            --paper-menu-button-dropdown: {
+                max-width: 100%;
+                left: -200px;
+            }
+            ;
+        }
+        
+        paper-item {
+            --paper-item: {
+                white-space: nowrap;
+                width: 100%;
+            }
+            ;
+        }
+        
+        iron-image {
+            --iron-image-width: 100%;
+        }
+        
+        .image-cover {
+            padding: 50px;
+            background-color: rgba(69, 90, 100, 1);
+            padding-top: 60px;
+        }
+        
+        .image-cover .avatar-text {
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .menu iron-list .menu {
+            padding: 5px;
+            padding-left: 10px;
+        }
+        
+        .menu iron-list .menu:hover {
+            background-color: rgba(120, 144, 156, 1);
+            color: #fff;
+        }
+        
+        .menu a {
+            text-decoration: none;
+        }
+        
+        iron-list {
+            --iron-list-items-container: {
+                margin: auto;
+            }
+            ;
+        }
+        
+        .hoz-line {
+            font-weight: bold;
+            color: rgba(38, 50, 56, 1);
+            border-bottom: 1px solid rgba(38, 50, 56, 1);
+            padding: 5px;
+        }
+    </style>
+  </template>
+
+</dom-module>

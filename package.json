@@ -1,0 +1,19 @@
+{
+    "name": "poly-thinny",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "polymer serve --port 8081 | npm run watch",
+        "watch": "browser-sync start --proxy localhost:8081 --files \"src/**/*.*, index.html, style.css, *.js\""
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.23.5",
+        "gulp": "^3.9.1"
+    }
+}

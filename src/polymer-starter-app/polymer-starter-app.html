@@ -1,0 +1,59 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="../elements/toolbar/toolbar.html">
+<link rel="import" href="../elements/card/card.html">
+<link rel="import" href="../elements/quotation/new-quotation-request.html">
+<link rel="import" href="../elements/contact/contact.html">
+<link rel="import" href="../elements/home/home.html">
+<!-- add custom-style -->
+<link rel="import" href="./custom-style.html">
+
+<dom-module id="polymer-starter-app">
+    <template>
+        <!-- include custom-style -->
+        <style include="app-style"></style>
+
+        <!-- toolbar -->
+        <toolbar-box _width="[[window_width]]"></toolbar-box>
+
+        <!-- spinner -->
+        <paper-spinner active="{{loading}}" class="orange"></paper-spinner>
+
+        <!-- location route -->
+        <app-location route="{{route}}" use-hash-as-path></app-location>
+
+        <!-- route with page -->
+        <app-route route="{{route}}" pattern="/:page" data="{{routeData}}">
+        </app-route>
+
+        <!-- route page with id params  -->
+        <app-route route="{{route}}" pattern="/:page/:id" data="{{routeData}}">
+        </app-route>
+
+        <!-- iron pages -->
+        <iron-pages selected="[[routeData.page]]" attr-for-selected="name" fallback-selection="view404" role="main">
+
+            <!-- iron page injection -->
+            <div name="">
+                <h2>page: [[routeData.page]]</h2>
+                <home-page></home-page>
+            </div>
+            <div name="home-page">
+                <h2>page: [[routeData.page]]</h2>
+                <home-page></home-page>
+            </div>
+            <div name="new-quotation-request">
+               <new-quotation-request></new-quotation-request>
+            </div>
+            <div name="contact-us">
+                <contact-us></contact-us>
+            </div>
+            <div name="product">
+                <h2>page: [[routeData.page]]</h2>
+            </div>
+            <div name="view404">
+                <h2>page: 404 [[routeData.page]]</h2>
+            </div>
+        </iron-pages>
+    </template>
+    <script src="./polymer.app.js"></script>
+</dom-module>

@@ -1,0 +1,20 @@
+<link rel="import" href="../../elements/includes.html">
+<!-- add custom-style -->
+<link rel="import" href="./nav-left-style.html">
+
+<dom-module id="nav-list">
+    <template>
+         <!-- include custom-style -->
+        <style include="nav-left-style"></style>
+
+        <iron-list items="[[items]]" as="item">
+            <template>
+                <div class="list" drawer-toggle>
+                     [[item.name]]  
+                </div>
+            </template>
+    </iron-list>
+    </template>
+
+    <script src="./nav-left.js"></script>
+</dom-module>
